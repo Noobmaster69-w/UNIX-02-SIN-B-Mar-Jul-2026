@@ -14,3 +14,4 @@ gpg --output doc_no_firmado_binario.txt --sign doc_no_cifrado2.txt #We signed th
 gpg --verify ag_doc_no_cifrado_firmado_binario.txt #check again
 gpg --output firma_separada_doc_no_cifrado2.sig --detach-sign doc_no_cifrado2.txt #sign and separate
 gpg --verify ag_firma_separada_doc_no_cifrado.sig ag_doc_no_cifrado.txt 
+gpg --output doc_cifrado_y_firmado.txt --encrypt --sign --recipient FD999E623F0E6A05942CE911A91C2A6252985C72 doc_no_cifrado.txt #sign and encrypt a document
