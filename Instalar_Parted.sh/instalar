@@ -1,5 +1,7 @@
 sudo apt update #Updates the local list of available packages and their versions
-sudo apt upgrade $Download and install the latest versions of all packages
+sudo apt upgrade $Download #and install the latest versions of all packages
 sudo apt install parted #Install the GNU parted partition editor on Debian/Ubuntu-based Linux systems
 sudo parted -1 && echo -e "In" && Isblk -f && echo -e "\n---\n" #display a detailed report about your disks and partitions
- [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS" #to quickly identify how your computer started up.
+[ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS" #to quickly identify how your computer started up
+echo "esto es un archivo" >archivo.txt #Create a file and write the message in it.
+stat archivo.txt #Shows technical data sheet of the file
