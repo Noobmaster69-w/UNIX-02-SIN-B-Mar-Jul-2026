@@ -1,0 +1,3 @@
+sudo apt update #Updates the local list of available packages and their versions
+sudo apt upgrade $Download and install the latest versions of all packages
+sudo apt install parted #Install the GNU parted partition editor on Debian/Ubuntu-based Linux systems
