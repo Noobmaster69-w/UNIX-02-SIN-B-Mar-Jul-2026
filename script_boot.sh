@@ -9,3 +9,6 @@ total 12
 925546 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:37 .
 918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:37 ..
 stat . #Show detailed information about the current directory
+mkdir -p /tmp/prueba/sub1 /tmp/prueba/sub2 #Create the sub1 and sub2 folders inside /tmp/test, also creating the intermediate folders if they do not exist
+stat /tmp/prueba #Show detailed information for the /tmp/test directory
+man mkdir #Show the manual for the mkdir command
