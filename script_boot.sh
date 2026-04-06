@@ -8,3 +8,4 @@ ls -lai #List all files and folders with detailed information
 total 12
 925546 drwxr-xr-x 2 codespace codespace 4096 Apr  6 12:37 .
 918515 drwxr-x--- 1 codespace codespace 4096 Apr  6 12:37 ..
+stat . #Show detailed information about the current directory
