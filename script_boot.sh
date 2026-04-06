@@ -12,3 +12,13 @@ stat . #Show detailed information about the current directory
 mkdir -p /tmp/prueba/sub1 /tmp/prueba/sub2 #Create the sub1 and sub2 folders inside /tmp/test, also creating the intermediate folders if they do not exist
 stat /tmp/prueba #Show detailed information for the /tmp/test directory
 man mkdir #Show the manual for the mkdir command
+pwd #It shows me the directory where I am
+whoami #It tells you which user you are logged in as
+ls #see what's in the current directory
+ls -l #List files and folders with detailed information
+ls -la #List all files and folders with details
+ls -lh #List files and folders with details and sizes in a readable format
+ls -it #List files showing their inode number and sorted by modification date
+ls / #ls absolute route
+ls /etc | head -20 #displays the first 20 files in the directory
+ls /dev | head -20 #It contains files that represent devices
