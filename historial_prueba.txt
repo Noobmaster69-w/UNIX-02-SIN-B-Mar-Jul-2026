@@ -1,0 +1,52 @@
+    1  mkdir -p nebula/bitacoras
+    2  mkdir -p nebula/borradores
+    3  mv nebula/cosmos.txt nebula/bitacoras/
+    4  find . -name "cosmos.txt"
+    5  git add -A
+    6  git commit -m "2"
+    7  mv nebula/cosmos.txt nebula/bitacoras/
+    8  find . -name "cosmos.txt"
+    9  git add nebula/bitacoras nebula/borradores
+   10  chmod 640 nebula/bitacoras/cosmos.txt
+   11  ls -l nebula/bitacoras/cosmos.txt
+   12  chmod u+x nebula/galaxia.sh
+   13  chmod o-w nebula/estrella.conf
+   14  chmod u+x nebula/galaxia.sh
+   15  mv nebula/estrella.bak nebula/estrella.conf
+   16  chmod u+x nebula/galaxia.sh
+   17  chmod o-w nebula/estrella.conf
+   18  chmod u+s nebula/galaxia.sh
+   19  ls -l nebula/galaxia.sh
+   20  chmod +t /tmp/nebula_zone
+   21  sudo mkdir -p /tmp/nebula_zone
+   22  sudo chmod 777 /tmp/nebula_zone
+   23  sudo chmod +t /tmp/nebula_zone
+   24  gpg --batch --generate-key <<EOF
+Key-Type: RSA
+Key-Length: 2048
+Name-Real: aurora
+Name-Email: aurora@nebula.lab
+Expire-Date: 0
+%no-protection
+%commit
+EOF
+
+   25  gpg --encrypt --recipient aurora@nebula.lab --output nebula/bitacoras/cosmos.txt.gpg nebula/bitacoras/cosmos.txt
+   26  gpg --clearsign --local-user aurora@nebula.lab --output nebula/estrella.conf.asc nebula/estrella.conf
+   27  gpg --detach-sign --local-user aurora@nebula.lab --output nebula/galaxia.sh.sig nebula/galaxia.sh
+   28  history
+   29  history > historial_prueba.txt
+
+Key-Type: RSA
+Key-Length: 2048
+Name-Real: aurora
+Name-Email: aurora@nebula.lab
+Expire-Date: 0
+%no-protection
+%commit
+EOF
+
+   25  gpg --encrypt --recipient aurora@nebula.lab --output nebula/bitacoras/cosmos.txt.gpg nebula/bitacoras/cosmos.txt
+   26  gpg --clearsign --local-user aurora@nebula.lab --output nebula/estrella.conf.asc nebula/estrella.conf
+   27  gpg --detach-sign --local-user aurora@nebula.lab --output nebula/galaxia.sh.sig nebula/galaxia.sh
+   28  history
