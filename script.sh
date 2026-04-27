@@ -84,4 +84,8 @@ sudo chgrp grupo_test comun # Changes the group of comun to grupo_test using adm
 
 usermod -a -G grupo_test luna # Adds user luna to the grupo_test group without removing existing groups.
 chgrp grupo_test comun # Changes the group of comun to grupo_test.
+ls -l comun #Shows detailed information about comun
+sudo chown luna:grupo_test mi_archivo #Changes the owner and group of a file with root privileges.
+ls -l mi_archivo # ls -l: Shows file permissions, owner, and group information.
+sudo usermod -aG grupo_test $USER #Adds a user to an existing group.
 
