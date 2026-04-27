@@ -89,3 +89,7 @@ sudo chown luna:grupo_test mi_archivo #Changes the owner and group of a file wit
 ls -l mi_archivo # ls -l: Shows file permissions, owner, and group information.
 sudo usermod -aG grupo_test $USER #Adds a user to an existing group.
 
+mkdir -p proyecto/sub #Creates directories and parent directories if they do not exist.
+touch proyecto/readme proyecto/sub/datos #Creates multiple empty files at specified paths. 
+sudo chown -R luna:grupo_test proyecto #Recursively changes ownership of a directory and its contents.
+ls -lR proyecto #Displays directory contents recursively with detailed information.
