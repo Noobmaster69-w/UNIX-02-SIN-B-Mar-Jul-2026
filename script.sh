@@ -78,5 +78,10 @@ ls -l mi_archivo # Shows detailed information about mi_archivo.
 sudo useradd -m -s /usr/bin/zsh luna # Creates a new user named luna with a home directory and zsh as the default shell.
 sudo chown luna mi_archivo # Changes the owner of mi_archivo to user luna.
 
+groups # Displays the groups the current user belongs to.
+chgrp grupo_test comun #Changes the group of comun to grupo_test.
+sudo chgrp grupo_test comun # Changes the group of comun to grupo_test using administrator privileges.
 
+usermod -a -G grupo_test luna # Adds user luna to the grupo_test group without removing existing groups.
+chgrp grupo_test comun # Changes the group of comun to grupo_test.
 
