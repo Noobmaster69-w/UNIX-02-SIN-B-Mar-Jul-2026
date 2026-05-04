@@ -197,7 +197,7 @@ SHELL ["/bin/bash", "-c"]
 # Codespaces siempre monta el código del repositorio en
 # /workspaces/<nombre-del-repo>. Establecer /workspaces aquí hace que las
 # terminales se abran cerca de nuestros archivos del curso.
-WORKDIR /workspaces
+WORKDIR /workspaces/UNIX-02-SIN-B-Mar-Jul-2026
 
 # Configuración de Git para el contenedor:
 # - safe.directory *: confía en cualquier repo montado (necesario porque
@@ -222,7 +222,7 @@ RUN chsh -s /usr/bin/zsh root
 
 RUN cat >> /root/.zshrc <<'EOF'
 
-PROMPT='%F{cyan}[Bryan-Merino]%f %F{yellow}%l~%f %(?.%F{green}✔.%F{red}x %?)%f %# '
+PROMPT='%F{cyan}[Bryan-Merino]%f %F{yellow}%1~%f %(?.%F{green}✓.%F{red}x %?)%f %# '
 EOF
 
 CMD ["/usr/bin/zsh"]
