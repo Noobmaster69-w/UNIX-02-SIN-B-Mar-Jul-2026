@@ -11,4 +11,3 @@ print('Salt 2:', salt2)
 print('Hash 2:', hash2[:50])
 print()
 print('Son iguales?', hash1 == hash2)
-
