@@ -32,5 +32,11 @@ make -j 2 # Compile BusyBox using 2 parallel jobs to speed up the build
 nano .config # Disable TC feature to fix compilation error and rebuild BusyBox
 sudo mkdir /boot-files/initramfs # Create directory for initramfs build files
 sudo make CONFIG_PREFIX=/boot-files/initramfs install # Install BusyBox into initramfs root filesystem
-
-
+cd /boot-files/initramfs # Enter initramfs root directory
+sudo vi init # Init script for BusyBox initramfs
+#!/bin/sh #The first line tells the kernel to use the shell to interpret the file
+/bin/sh #The second line simply starts an interactive shell.
+sudo rm linuxrc #Remove the default BusyBox symlink to avoid conflicts with the custom init script
+sudo chmod +x init #Grant execution permissions to the init script to allow the Kernel to launch it as the first process 
+sudo find . | cpio -o -H newc > ../init.cpio #The cpio command successfully executed, archiving the filesystem into the init.cpio #file.
+cd #Return to the home directory
