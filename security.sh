@@ -5,3 +5,5 @@ groups # Displays all groups that the current user belongs to
 groups $USER # Shows the group memberships of the user stored in the $USER environment variable
 cat /etc/group # Attempts to display /etc/groups, but the correct file in Linux is /etc/group (system group information)
 cat /etc/group | grep daemon # Searches for the "daemon" group in /etc/group and displays matching lines
+mkdir ~/proyecto_unix/ # Creates a directory named "proyecto_unix" in the user's home folder
+ls -la ~/proyecto_unix/ # Displays a long listing of all files, including hidden files, inside the ~/proyecto_unix directory
