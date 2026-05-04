@@ -40,3 +40,12 @@ sudo rm linuxrc #Remove the default BusyBox symlink to avoid conflicts with the 
 sudo chmod +x init #Grant execution permissions to the init script to allow the Kernel to launch it as the first process 
 sudo find . | cpio -o -H newc > ../init.cpio #The cpio command successfully executed, archiving the filesystem into the init.cpio #file.
 cd #Return to the home directory
+sudo su #Escalate privileges to the root user
+dd if=/dev/zero of=boot bs=1M count=50 #Create a 50MB empty disk image using dd to serve as the bootable storage medium
+mkfs -t fat boot #Format the boot image with a FAT filesystem to ensure compatibility with bootloaders and system firmwares
+syslinux boot #Install the Syslinux bootloader onto the boot image to make it bootable.
+
+mkdir m #Create a temporary directory to serve as a mount point
+mount boot m #Mount the 50MB boot image to the temporary directory
+cp bzImage init.cpio m #Copy the Linux kernel and the initramfs into the bootable image
+umount m #Unmount the directory to flush all data to the disk image and finalize the process.
