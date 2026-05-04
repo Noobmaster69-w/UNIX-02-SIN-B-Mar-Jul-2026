@@ -18,8 +18,19 @@ syslinux           Lightweight bootloader used to boot operating systems from di
 dosfstools         Utilities for creating and checking FAT file systems.
 qemu-system-x86    Emulator/virtualizer used to run x86 operating systems in virtual machines.
 
-git clone •-depth 1 https://github.com/torvalds/linux.git #Downloads a lightweight copy of the latest Linux kernel source code from GitHub without the full commit history
+git clone --depth 1 https://github.com/torvalds/linux.git #Downloads a lightweight copy of the latest Linux kernel source code from #GitHub without the full commit history
 cd linux # Change to linux directory
 make menuconfig # Opens a terminal-based configuration menu to customize kernel build options before compiling the Linux kernel
 make -j 2 #Compiles the project using two parallel jobs to speed up the build process by utilizing multiple CPU cores
+sudo mkdir /boot-files # Create a directory in the root filesystem to store boot/kernel files
+sudo cp arch/x86/boot/bzImage /boot-files/ # Copy the compiled Linux kernel image to the boot-files directory
+cd .. # Move one directory up (go to parent directory)
+git clone --depth 1 https://git.busybox.net/busybox # Clone BusyBox repository with shallow depth (only latest version)
+cd busybox # Change directory into the BusyBox folder
+make menuconfig # Open interactive configuration menu for BusyBox
+make -j 2 # Compile BusyBox using 2 parallel jobs to speed up the build
+nano .config # Disable TC feature to fix compilation error and rebuild BusyBox
+sudo mkdir /boot-files/initramfs # Create directory for initramfs build files
+sudo make CONFIG_PREFIX=/boot-files/initramfs install # Install BusyBox into initramfs root filesystem
+
 

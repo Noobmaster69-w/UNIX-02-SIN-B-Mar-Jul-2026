@@ -23,7 +23,7 @@ ls / #ls absolute route
 ls /etc | head -20 #displays the first 20 files in the directory
 ls /dev | head -20 #It contains files that represent devices
 
-sudo apt install -y git vim make gcc libncurses-dev flex bison bc \ cpio libelf-dev libssl-dev syslinux dosfstools qemu-system-x86
+sudo apt install -y git vim make gcc libncurses-dev flex bison bc cpio libelf-dev libssl-dev syslinux dosfstools qemu-system-x86
 
 gcc , make — #kernel compilation and BusyBox
 libncurses-dev — #menús interactivos de configuración ( menuconfig )
