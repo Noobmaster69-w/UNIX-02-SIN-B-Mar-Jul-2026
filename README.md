@@ -49,3 +49,5 @@ mkdir m #Create a temporary directory to serve as a mount point
 mount boot m #Mount the 50MB boot image to the temporary directory
 cp bzImage init.cpio m #Copy the Linux kernel and the initramfs into the bootable image
 umount m #Unmount the directory to flush all data to the disk image and finalize the process.
+qemu-system-x86_64 -nographic -append "console=ttyS0" \
+-kernel bzImage -initrd init.cpio -drive file=boot,format=raw #Launch the custom Linux kernel and initramfs using QEMU with the 50MB #boot image attached as a raw drive
