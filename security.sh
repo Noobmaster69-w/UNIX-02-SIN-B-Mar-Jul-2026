@@ -35,4 +35,11 @@ id
 #add user to a group with usermod (low level)
 usermod -aG desarrolladores $USER #
 usermod -aG diseno $USER
-#Using #USER gives an error because it doesn't contain anything; to fix this, we change it to root or #(whoami).
+#Using #USER gives an error because it doesn't contain anything; to fix this, we change it to root or #(whoami)
+#check for changes in /etc/group
+grep "desarrolladores\|diseno" /etc/group
+#Add user to group with adduser (high level, Debian)
+adduser root marketing
+#see current status
+id root
+grep root /etc/group
