@@ -16,3 +16,9 @@ grep "desarrolladores\|operaciones\|servicios_web" /etc/group
 grep -E "desarrolladores|operaciones|servicios_web" /etc/group
 #see main options
 groupadd --help
+grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
+#System groups have a GID lower than the minimum usage
+#SYS_GID_MIN = 100
+#SYS_GID_MAX = 999
+#GID_MIN = 1000
+#GID_MAX = 60000
