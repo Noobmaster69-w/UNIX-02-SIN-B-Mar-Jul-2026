@@ -29,3 +29,10 @@ addgroup -gid 2100 marketing
 addgroup -system cache_web
 #verify 
 grep "diseno\|marketing\|cache_web" /etc/group
+#See which groups the current user belongs to
+groups
+id
+#add user to a group with usermod (low level)
+usermod -aG desarrolladores $USER #
+usermod -aG diseno $USER
+#Using #USER gives an error because it doesn't contain anything; to fix this, we change it to root or #(whoami).
