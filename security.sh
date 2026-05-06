@@ -63,3 +63,6 @@ touch ~/lab_chgrp/scripts/deploy.sh
 #View initial state- everyone has the user group
 ls -la ~/lab_chgrp/proyectos/
 ls -la ~/lab_chgrp/reportes/
+#change the group of a file
+chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
+ls -la ~/lab_chgrp/proyectos/
