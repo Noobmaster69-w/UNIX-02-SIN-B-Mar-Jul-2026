@@ -7,3 +7,12 @@ cat /etc/group # Attempts to display /etc/groups, but the correct file in Linux 
 cat /etc/group | grep daemon # Searches for the "daemon" group in /etc/group and displays matching lines
 mkdir ~/proyecto_unix/ # Creates a directory named "proyecto_unix" in the user's home folder
 ls -la ~/proyecto_unix/ # Displays a long listing of all files, including hidden files, inside the ~/proyecto_unix directory
+sudo groupadd desarrolladores #groupadd nombre_grupo
+#Create a simple group
+groupadd -g 2000 operaciones
+groupadd --system servicios_web
+#verify that they were created
+grep "desarrolladores\|operaciones\|servicios_web" /etc/group
+grep -E "desarrolladores|operaciones|servicios_web" /etc/group
+#see main options
+groupadd --help
