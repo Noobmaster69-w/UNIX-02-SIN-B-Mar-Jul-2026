@@ -27,4 +27,6 @@ sudo sl # Run the steam locomotive animation command with sudo privileges
 ls -l hello.sh # Show detailed information about the hello.sh file
 chmod u+x hello.sh # Give the file owner execute permission for hello.sh
 ./hello.sh # Execute the hello.sh script from the current directory
+sudo chown root hello.sh # Change the owner of hello.sh to root
+sudo ./hello.sh # Run the hello.sh script with root privileges
 
