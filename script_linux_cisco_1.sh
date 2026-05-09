@@ -17,4 +17,7 @@ cd School/Art # Change to the Art directory inside School
 cd .. # Move to the parent directory
 cd . # Stay in the current directory
 cd ~ # Change to the current user's home directory
+ls -l /var/log/ # Show detailed contents of the /var/log directory
+ls -lt /var/log # Show detailed contents of /var/log sorted by modification time
+ls -l -S /var/log # Show detailed contents of /var/log sorted by file size
 
