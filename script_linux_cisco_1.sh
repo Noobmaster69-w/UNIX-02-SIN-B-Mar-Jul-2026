@@ -24,4 +24,7 @@ su - # Switch to the root user with a login shell
 exit #logout
 sl # Run the steam locomotive animation command
 sudo sl # Run the steam locomotive animation command with sudo privileges
+ls -l hello.sh # Show detailed information about the hello.sh file
+chmod u+x hello.sh # Give the file owner execute permission for hello.sh
+./hello.sh # Execute the hello.sh script from the current directory
 
