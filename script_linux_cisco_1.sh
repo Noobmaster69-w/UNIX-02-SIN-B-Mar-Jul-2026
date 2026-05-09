@@ -35,4 +35,6 @@ head alpha.txt # Show the first lines of the alpha.txt file
 tail alpha.txt # Show the last lines of the alpha.txt file
 head -n 5 alpha.txt # Show the first 5 lines of the alpha.txt file
 tail -n 5 alpha.txt # Show the last 5 lines of the alpha.txt file
+cp /etc/passwd . # Copy the passwd file to the current directory
+if=/dev/zero of=/tmp/swapex bs=1M count=50 # This is incomplete because the dd command is missing
 
