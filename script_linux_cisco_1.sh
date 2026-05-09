@@ -29,4 +29,10 @@ chmod u+x hello.sh # Give the file owner execute permission for hello.sh
 ./hello.sh # Execute the hello.sh script from the current directory
 sudo chown root hello.sh # Change the owner of hello.sh to root
 sudo ./hello.sh # Run the hello.sh script with root privileges
+cat animals.txt # Display the contents of the animals.txt file
+cat alpha.txt # Display the contents of the alpha.txt file
+head alpha.txt # Show the first lines of the alpha.txt file
+tail alpha.txt # Show the last lines of the alpha.txt file
+head -n 5 alpha.txt # Show the first 5 lines of the alpha.txt file
+tail -n 5 alpha.txt # Show the last 5 lines of the alpha.txt file
 
