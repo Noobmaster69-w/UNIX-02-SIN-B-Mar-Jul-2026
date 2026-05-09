@@ -20,4 +20,8 @@ cd ~ # Change to the current user's home directory
 ls -l /var/log/ # Show detailed contents of the /var/log directory
 ls -lt /var/log # Show detailed contents of /var/log sorted by modification time
 ls -l -S /var/log # Show detailed contents of /var/log sorted by file size
+su - # Switch to the root user with a login shell
+exit #logout
+sl # Run the steam locomotive animation command
+sudo sl # Run the steam locomotive animation command with sudo privileges
 
