@@ -5,3 +5,9 @@ ls -la ~/test_grupo_heredado.txt #is the user's primary group
 echo "Grupo actual: $(id -gn)" #see the current group
 touch ~/antes_de_newgrp.txt #Create a file before newgrp
 ls -la ~/antes_de_newgrp.txt
+#switch to the 'desarrolladores' group
+newgrp desarrolladores #AQUI ME QUEDE
+#verify that the active group changed
+id -gn
+echo "Nuevo grupo activo: $(id -gn)"
+sudo apt install util-linux-extra
