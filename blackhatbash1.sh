@@ -6,3 +6,6 @@ echo ${OSTYPE}
 ps -e -f
 ps -ef
 df --human-readable
+#bash blackhatbash1.sh
+#bash -n blackhatbash1.sh
+set +x
