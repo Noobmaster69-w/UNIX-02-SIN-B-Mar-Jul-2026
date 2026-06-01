@@ -10,4 +10,10 @@ newgrp desarrolladores #AQUI ME QUEDE
 #verify that the active group changed
 id -gn
 echo "Nuevo grupo activo: $(id -gn)"
-sudo apt install util-linux-extra
+#create a file inside the subshell
+touch ~/dentro_de_newgrp.txt
+ls -la ~/dentro_de_newgrp.txt
+#The group is now developers.
+#Create a directory
+mkdir -p ~/proyecto_dev/src
+ls -la ~/ 

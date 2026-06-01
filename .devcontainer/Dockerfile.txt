@@ -188,7 +188,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Por defecto Docker usa /bin/sh (un shell más limitado y antiguo). Lo
 # cambiamos a bash por si agregamos más instrucciones con sintaxis
 # moderna (arrays, [[ ]], etc.).
-SHELL ["/bin/bash", "-c"]
+SHELL ["/bin/zsh", "-c"]
 
 
 # ----------------------------------------------------------------------------
@@ -199,34 +199,34 @@ SHELL ["/bin/bash", "-c"]
 # terminales se abran cerca de nuestros archivos del curso.
 WORKDIR /workspaces
 
-# Configuración de Git para el contenedor:
-# - safe.directory *: confía en cualquier repo montado (necesario porque
-#   /workspaces/... tiene un UID distinto al de root dentro del container).
-# - init.defaultBranch main: evita warnings de "master vs main" en git init.
-# - pull.rebase false: merge por defecto al hacer pull (más intuitivo)
-# - git lfs install --system: registra los hooks de LFS globalmente para
-#   que, si un repo los necesita, funcionen sin sorpresas.
 RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
  && git lfs install --system
 
+
+# ----------------------------------------------------------------------------
+# CONFIGURACIÓN DE USUARIO Y PROMPT (ZSH)
+# ----------------------------------------------------------------------------
+USER root
+
+# Asegurar la ruta correcta de Zsh en Kali eセットar como predeterminada
+RUN chsh -s /bin/zsh root
+
+# Forzar el prompt en el .zshrc de root
+RUN cat >> /root/.zshrc <<'EOF'
+# Forzar a Zsh a ignorar configuraciones externas de VS Code
+unset PROMPT
+unset RPROMPT
+
+# prompt idéntico a la imagen
+export PROMPT='%F{cyan}[Bryan-Merino]%f %F{yellow}UNIX-02-SIN-B-Mar-Jul-2026%f %(?.%F{green}✔.%F{red}x %?)%f %# '
+EOF
+
 # ----------------------------------------------------------------------------
 # CMD: comando que se ejecuta por defecto al arrancar el contenedor
 # ----------------------------------------------------------------------------
-# Lanza una shell bash interactiva. Codespaces la sobrescribe con su
-# propia terminal integrada de VS Code, pero es buena práctica dejarla
-# definida para que la imagen sea usable también con Docker puro.
-# Prompt del curso para bash
-RUN chsh -s /usr/bin/zsh root
-
-RUN cat >> /root/.zshrc <<'EOF'
-
-PROMPT='%F{cyan}[Bryan-Merino]%f %F{yellow}%l~%f %(?.%F{green}✔.%F{red}x %?)%f %# '
-EOF
-
-CMD ["/usr/bin/zsh"]
-
+CMD ["/bin/zsh"]
 
 
 
