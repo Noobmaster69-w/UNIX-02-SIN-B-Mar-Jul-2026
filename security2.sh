@@ -17,3 +17,10 @@ ls -la ~/dentro_de_newgrp.txt
 #Create a directory
 mkdir -p ~/proyecto_dev/src
 ls -la ~/ 
+
+#proyecto_dev/ has a group of "desarrolladres"
+#exit subshell
+exit
+#verify that we returned to the original group
+id -gn
+echo "Grupo restaurado: $(id-gn)"
