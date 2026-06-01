@@ -27,3 +27,9 @@ echo "Grupo restaurado: $(id-gn)"
 
 #compare the two files
 ls -la /home/vscode/antes_de_newgrp.txt /home/vscode/dentro_de_newgrp.txt
+
+#newgrp creates a subshell
+echo "PID del shell actual: $$"   
+newgrp desarrolladores
+echo "PID dentro de newgrp: $$"
+#the PID is different -- it's a child process
