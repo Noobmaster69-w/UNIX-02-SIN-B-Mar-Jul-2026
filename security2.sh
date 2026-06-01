@@ -24,3 +24,6 @@ exit
 #verify that we returned to the original group
 id -gn
 echo "Grupo restaurado: $(id-gn)"
+
+#compare the two files
+ls -la /home/vscode/antes_de_newgrp.txt /home/vscode/dentro_de_newgrp.txt
