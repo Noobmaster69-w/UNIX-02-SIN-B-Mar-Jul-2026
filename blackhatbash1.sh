@@ -1,3 +1,5 @@
+#!/bin/bash
+set -x
 bash --version # displays the version of the bash shell currently installed and running
 env
 echo ${SHELL}
