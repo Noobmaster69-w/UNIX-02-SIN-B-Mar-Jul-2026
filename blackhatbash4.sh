@@ -1,5 +1,9 @@
 #!/bin/bash/env bash
-set -x
+
+
 let result="4 * 5"
 echo ${result}
-set+x
+
+
+let result=(("5 * 5"))
+echo ${result1}
