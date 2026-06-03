@@ -1,0 +1,20 @@
+total 80
+drwxr-xr-x    1 root   root 4096 May 18 14:31 bin
+drwxr-xr-x    5 root   root  340 Jun  3 12:05 dev
+drwxr-xr-x    1 root   root 4096 Jun  3 12:05 etc
+drwxr-xr-x    1 root   root 4096 May 18 14:31 home
+drwxr-xr-x    1 root   root 4096 Apr 15 04:51 lib
+drwxr-xr-x    5 root   root 4096 Apr 15 04:51 media
+drwxr-xr-x    2 root   root 4096 Apr 15 04:51 mnt
+drwxr-xr-x    2 root   root 4096 Apr 15 04:51 opt
+dr-xr-xr-x  256 root   root    0 Jun  3 12:05 proc
+drwx------    1 root   root 4096 Jun  3 12:06 root
+drwxr-xr-x    1 root   root 4096 May 18 14:31 run
+drwxr-xr-x    1 root   root 4096 May 18 14:31 sbin
+drwxr-xr-x    2 root   root 4096 Apr 15 04:51 srv
+dr-xr-xr-x   12 root   root    0 Jun  3 13:29 sys
+drwxr-xrwt+   4 root   root 4096 Jun  3 13:16 tmp
+drwxr-xr-x    1 root   root 4096 May 18 14:31 usr
+drwxr-xr-x    1 root   root 4096 Jun  3 12:05 var
+drwxr-xr-x    5 root   root 4096 Jun  3 11:45 vscode
+drwxr-xrwx+   4 vscode root 4096 Jun  3 12:04 workspaces
