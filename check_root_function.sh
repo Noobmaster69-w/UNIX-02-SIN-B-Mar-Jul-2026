@@ -2,15 +2,26 @@
 # This function checks if the current user ID equals zero. 
 check_if_root(){  
 
-    if [[ "${EUID}" -eq "0" ]]; then # Comprueba si el ID de usuario efectivo es igual a 0 
-        return 0 # Si es igual a 0, la función termina exitosamente devolviendo un código de estado 0.
+    # Checks if the Effective User ID is equal to 0 
+    if [[ "${EUID}" -eq "0" ]]; then 
+        # If it is equal to 0, the function terminates successfully, returning an exit status of 0
+        return 0 
     else
-        return 1 # Si no es igual a 0, la función termina devolviendo un código de estado 1 
+        # If it is not equal to 0, the function terminates, returning an exit status of 1 
+        return 1 
     fi
-} # Cierra la definición de la función.
+} # Closes the function definition.
 
-if check_if_root; then # Llama a la función 'check_if_root' dentro de un 'if'. En Bash, si una función devuelve 0, es verdadero
-    echo "User is root!" # Si la función devolvió 0, se ejecuta esta línea
+# Calls the 'check_if_root' function inside an 'if' statement. In Bash, an exit status of 0 evaluates to TRUE.
+if check_if_root; then 
+    # If the function returned 0, this line is executed.
+    echo "User is root!" 
 else
-    echo "User is not root!" # Si la función devolvió 1, se ejecuta esta línea
-fi #cierra el bloque de condicion
+    # If the function returned 1, this line is executed.
+    echo "User is not root!" 
+fi # Closes the conditional block.
+
+adduser Bryan_M # Add a user, and it will ask for a password
+su - Bryan_M # it changes the user
+exit #logout the user
+

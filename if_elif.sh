@@ -1,17 +1,29 @@
 #!/bin/bash
+# Indicates to the system that this script should be executed using the Bash interpreter.
 
-USER_INPUT="${0}" # Asigna el primer argumento pasado por la línea de comandos a la variable USER_INPUT.
+# Assigns the first argument passed from the command line ($1) to the USER_INPUT variable.
+USER_INPUT="${0}" 
 
-if [[ -z "${USER_INPUT}" ]]; then # Comprueba si la variable USER_INPUT está vacía 
-    echo "You must provide an argument!" # Muestra un mensaje de error si el usuario no proporcionó ningún argumento
-    exit 1 # Termina la ejecución del script inmediatamente con un código de salida 1 
-fi # Cierra el primer bloque condicional 
+# Checks if the USER_INPUT variable is empty 
+if [[ -z "${USER_INPUT}" ]]; then 
+    # Displays an error message if the user did not provide any argument
+    echo "You must provide an argument!" 
+    # Terminates the script execution immediately with an exit code of 1 
+    exit 1 
+fi # Closes the first conditional block (if).
 
-if [[ -f "${USER_INPUT}" ]]; then # Comprueba si la ruta guardada en USER_INPUT existe y corresponde a un archivo regular 
-    echo "${USER_INPUT} is a file."  # Muestra en pantalla que el argumento es un archivo
+# Checks if the path stored in USER_INPUT exists and corresponds to a regular file 
+if [[ -f "${USER_INPUT}" ]]; then 
+    # Prints to the screen that the argument is a file.
+    echo "${USER_INPUT} is a file."  
 
-elif [[ -d "${USER_INPUT}" ]]; then # Si no es un archivo, comprueba si la ruta corresponde a un directorio existente 
-    echo "${USER_INPUT} is a directory." # Muestra en pantalla que el argumento es un directorio
-else  # Si no se cumple ninguna de las condiciones anteriores 
-    echo "${USER_INPUT} is not a file or a directory." # Muestra en pantalla que no se reconoce como un archivo o directorio válido.
-fi # Cierra el primer bloque condicional 
+# If it is not a file, checks if the path corresponds to an existing directory 
+elif [[ -d "${USER_INPUT}" ]]; then 
+    # Prints to the screen that the argument is a directory.
+    echo "${USER_INPUT} is a directory." 
+    
+# If none of the above conditions are met 
+else  
+    # Prints to the screen that it is not recognized as a valid file or directory.
+    echo "${USER_INPUT} is not a file or a directory." 
+fi # Closes the second conditional block 
