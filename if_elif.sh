@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USER_INPUT="${1}" # Asigna el primer argumento pasado por la línea de comandos a la variable USER_INPUT.
+USER_INPUT="${0}" # Asigna el primer argumento pasado por la línea de comandos a la variable USER_INPUT.
 
 if [[ -z "${USER_INPUT}" ]]; then # Comprueba si la variable USER_INPUT está vacía 
     echo "You must provide an argument!" # Muestra un mensaje de error si el usuario no proporcionó ningún argumento
