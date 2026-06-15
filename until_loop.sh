@@ -10,3 +10,6 @@ done
 echo "${FILE} appears to have some content in it!"
 
 
+for index in $(seq 1 10); do
+ echo "${index}"
+done
