@@ -12,3 +12,5 @@ case ${IP_ADDRESS} in
  echo "Could not identify the network"
  ;;
 esac
+
+
