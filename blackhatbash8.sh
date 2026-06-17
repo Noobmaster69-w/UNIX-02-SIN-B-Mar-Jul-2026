@@ -10,6 +10,7 @@ awk -F',' '{print $1}' example_csv.txt # We added $2
 
 awk 'NR < 10' log.txt
 
+grep "42.236.10.117" log.txt | awk '{print $7}'
 
 
 
