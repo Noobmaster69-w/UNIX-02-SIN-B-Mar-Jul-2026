@@ -20,7 +20,9 @@ sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
 #Extract the word "Mozilla" from the old file, "Godzilla" from the new file, and merge the columns
 paste <(grep -o "Mozilla" log.txt) <(grep -o "Godzilla" newlog.txt)
 
+sed 's/ //g' log.txt > newlog1.txt
 
+cat newlog1.txt
 
 
 
