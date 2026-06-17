@@ -24,6 +24,18 @@ sed 's/ //g' log.txt > newlog1.txt
 
 cat newlog1.txt
 
+sed '1d' log.txt
+
+sed '$d' log.txt > newlog1.txt
+
+sed '5,7d' log.txt
+
+sed -n '2,15 p' log.txt
+
+sed -i '1d' log.txt
+
+# Delete the first line of the file permanently 
+sed -i '1d' log.txt
 
 
 
