@@ -1,0 +1,87 @@
+====================================================
+ STARTING BRANCH EVALUATION: BlackHatBash
+====================================================
+
+[1/3] Analyzing repository commit history...
+  📅 Inferred delivery baseline date (latest commit): %Y->- (HEAD -> BlackHatBash, origin/BlackHatBash)
+./exercise2.sh: line 58: [: %u: integer expected
+./exercise2.sh: line 58: [: %u: integer expected
+   Total analyzed commits: 17
+  ✓ Commits saved during class hours (07:00 - 09:00): 0
+  ! Commits saved on class day (outside class hours): 1
+  ✘ Commits saved completely outside class days: 16
+ ⚠️ Commits found within the active day, but outside exact class hours.
+-> TIMELINE SCORE: 70/100
+
+[2/3] Validating compilation and syntax layout of scripts (.sh)...
+  ✓ array.sh: Clear compilation path. Syntax passed.
+  ✓ background.sh: Clear compilation path. Syntax passed.
+  ✓ blackhatbash1.sh: Clear compilation path. Syntax passed.
+  ✓ blackhatbash2.sh: Clear compilation path. Syntax passed.
+  ✓ blackhatbash3.sh: Clear compilation path. Syntax passed.
+  ✘ blackhatbash4.sh: Intercepted syntax validation exception.
+  ✓ blackhatbash5.sh: Clear compilation path. Syntax passed.
+  ✓ blackhatbash6.sh: Clear compilation path. Syntax passed.
+  ✓ blackhatbash7.sh: Clear compilation path. Syntax passed.
+  ✓ blackhatbash8.sh: Clear compilation path. Syntax passed.
+  ✓ break.sh: Clear compilation path. Syntax passed.
+  ✓ case.sh: Clear compilation path. Syntax passed.
+  ✓ check_root_function.sh: Clear compilation path. Syntax passed.
+  ✓ exercise1.sh: Clear compilation path. Syntax passed.
+  ✓ for_files.sh: Clear compilation path. Syntax passed.
+  ✓ for_ls.sh: Clear compilation path. Syntax passed.
+  ✓ function.sh: Clear compilation path. Syntax passed.
+  ✓ if_elif.sh: Clear compilation path. Syntax passed.
+  ✓ input_prompting.sh: Clear compilation path. Syntax passed.
+  ✓ integer_comparison.sh: Clear compilation path. Syntax passed.
+  ✓ linking_conditions.sh: Clear compilation path. Syntax passed.
+  ✓ local_scope_variable.sh: Clear compilation path. Syntax passed.
+  ✓ print_args.sh: Clear compilation path. Syntax passed.
+  ✓ string_comparison.sh: Clear compilation path. Syntax passed.
+  ✓ test_if_file_exists.sh: Clear compilation path. Syntax passed.
+  ✓ until_loop.sh: Clear compilation path. Syntax passed.
+  ✓ while.sh: Clear compilation path. Syntax passed.
+  ✓ while_loop.sh: Clear compilation path. Syntax passed.
+-> SYNTAX AND CLEANLINESS SCORE: 96.00/100
+
+[3/3] Auditing script documentation and commentary language...
+  ✓ array.sh: Technical documentation layout matches standard English requirements.
+  ✓ background.sh: Technical documentation layout matches standard English requirements.
+  ✓ blackhatbash1.sh: Technical documentation layout matches standard English requirements.
+  ✓ blackhatbash2.sh: Technical documentation layout matches standard English requirements.
+  ! blackhatbash3.sh: Incomplete code explanations or non-English terminology detected.
+  ! blackhatbash4.sh: Incomplete code explanations or non-English terminology detected.
+  ! blackhatbash5.sh: Incomplete code explanations or non-English terminology detected.
+  ! blackhatbash6.sh: Incomplete code explanations or non-English terminology detected.
+  ! blackhatbash7.sh: Incomplete code explanations or non-English terminology detected.
+  ✓ blackhatbash8.sh: Technical documentation layout matches standard English requirements.
+  ! break.sh: Incomplete code explanations or non-English terminology detected.
+  ! case.sh: Incomplete code explanations or non-English terminology detected.
+  ✓ check_root_function.sh: Technical documentation layout matches standard English requirements.
+  ✓ exercise1.sh: Technical documentation layout matches standard English requirements.
+  ✓ for_files.sh: Technical documentation layout matches standard English requirements.
+  ! for_ls.sh: Incomplete code explanations or non-English terminology detected.
+  ! function.sh: Incomplete code explanations or non-English terminology detected.
+  ✓ if_elif.sh: Technical documentation layout matches standard English requirements.
+  ! input_prompting.sh: Incomplete code explanations or non-English terminology detected.
+  ! integer_comparison.sh: Incomplete code explanations or non-English terminology detected.
+  ! linking_conditions.sh: Incomplete code explanations or non-English terminology detected.
+  ✓ local_scope_variable.sh: Technical documentation layout matches standard English requirements.
+  ! print_args.sh: Incomplete code explanations or non-English terminology detected.
+  ! string_comparison.sh: Incomplete code explanations or non-English terminology detected.
+  ! test_if_file_exists.sh: Incomplete code explanations or non-English terminology detected.
+  ! until_loop.sh: Incomplete code explanations or non-English terminology detected.
+  ! while.sh: Incomplete code explanations or non-English terminology detected.
+  ✓ while_loop.sh: Technical documentation layout matches standard English requirements.
+  ℹ️ Documentation criteria insufficient. Score adjusted to minimum base value.
+-> WORKSPACE COMMENTARY SCORE: 50/100
+
+====================================================
+ FINAL GRADING SUMMARY
+====================================================
+1. Timeline Schedule Fulfillment:   70 / 100
+2. System Syntax & Structure:       96.00 / 100
+3. Technical English Commentary:    50 / 100
+----------------------------------------------------
+CUMULATIVE GRADE RECORDED: [1;32m72.00 / 100[0m
+====================================================

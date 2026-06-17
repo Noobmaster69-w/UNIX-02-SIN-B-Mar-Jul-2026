@@ -83,4 +83,11 @@ bg %1
 # Terminal Notification 2: Asynchronous report stating that job number 1 has finished executing (Done)
 # [1]+  Done                        sleep 100
 
+nohup ./exercise2.sh &
+chmod +x exercise2.sh
+#RESULT:
+# Shell Tracking Info: [1] is the background job ID, and 36679 is the actual system Process ID (PID)
+# [1] 36679
+# Standard Nohup Broadcast: Informational message confirming stdout/stderr redirection
+# nohup: ignoring input and appending output to 'nohup.out'
 
