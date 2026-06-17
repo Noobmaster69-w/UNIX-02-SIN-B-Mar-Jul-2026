@@ -202,3 +202,5 @@ PROMEDIO_FINAL=$(echo "scale=2; ($NOTA_HORARIO + $NOTA_SINTAXIS + $NOTA_COMENTAR
 # Safe delivery output stream presenting color-coded total grades securely to stdout
 echo -e "CUMULATIVE GRADE RECORDED: \033[1;32m$PROMEDIO_FINAL / 100\033[0m"
 echo "===================================================="
+
+sleep 800

@@ -91,3 +91,5 @@ chmod +x exercise2.sh
 # Standard Nohup Broadcast: Informational message confirming stdout/stderr redirection
 # nohup: ignoring input and appending output to 'nohup.out'
 
+sleep 800 #We put it at the end of exercise2
+ps -aux 
