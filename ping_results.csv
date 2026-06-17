@@ -1,0 +1,7 @@
+mysite,nostarch.com,failure,2026-06-17 13:52:19
+officesite,google.com,failure,2026-06-17 14:02:02
+localsite,127.0.0.1,success,2026-06-17 14:02:13
+
+# Row 1: External domain test captured and flagged as failure (ICMP traffic dropped)
+# Row 2: Secondary tracking indicator appended smoothly below the first record
+# Row 3: Local loopback validation successful (Internal network stack operational)
